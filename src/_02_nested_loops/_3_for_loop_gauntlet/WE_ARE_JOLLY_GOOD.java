@@ -28,8 +28,13 @@ public class WE_ARE_JOLLY_GOOD {
 			}
 			for(int p =0; p <= 777; p +=1) {
 				if(p % 7 == 0) {
-					System.out.println(p);
+				//	System.out.println(p);
 				}
+			}
+			int age = 0;
+			for(int e = 2014; e < 2026; e +=1) {
+				System.out.println("in " + e + " I was " + age + ".");
+				age +=1;
 			}
 		}
 	}
