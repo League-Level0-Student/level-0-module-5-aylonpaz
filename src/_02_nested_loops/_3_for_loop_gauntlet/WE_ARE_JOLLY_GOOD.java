@@ -33,8 +33,36 @@ public class WE_ARE_JOLLY_GOOD {
 			}
 			int age = 0;
 			for(int e = 2014; e < 2026; e +=1) {
-				System.out.println("in " + e + " I was " + age + ".");
+			//	System.out.println("in " + e + " I was " + age + ".");
 				age +=1;
+			}
+			for(int j = 0; j < 3;j +=1) {
+				for(int a = 0; a <3; a +=1) {
+					//System.out.println(j + " " + a);
+				}
+			}
+			for(int x = 1; x <=9; x +=1) {
+				if(x == 3 || x == 6) {
+					//System.out.println(x + " ");
+				}else{
+					//System.out.print(x + " ");
+				}
+			}
+			for(int z = 0; z <=100; z +=1) {
+				if(z % 10 == 0) {
+					//System.out.println(z + " ");
+				}else {
+					//System.out.print(z + " ");
+				}
+			}
+			int numberOfStars = 0;
+			for(int q = 1; q < 7; q +=1) {
+				System.out.println();
+				for(int efc = 1;  efc <= q; efc +=1) {
+					System.out.print("* ");
+					
+					}
+				
 			}
 		}
 	}
