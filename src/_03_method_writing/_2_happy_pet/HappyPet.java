@@ -26,9 +26,11 @@ public class HappyPet {
 				else if(pet.toLowerCase().contains("tax") && task == 2) {
 					happenessLevel -= 1000000000;
 				}
-						
+				if(pet.toLowerCase().contains("cat")) {
+					
+				}
 				if(happenessLevel < 0) {
-					JOptionPane.showMessageDialog(null, "YOU SUCK! :O");
+					JOptionPane.showMessageDialog(null, "YOU SUCK! >:(");
 					return;
 				}
 			// 6. Use user input to call the appropriate method created in step 5 below.
