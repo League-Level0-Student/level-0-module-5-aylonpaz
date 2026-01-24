@@ -5,18 +5,20 @@ public class HappyPet {
 	
 	// 1. Add the following variable to the next line: static int happinessLevel = 0;
 	// this will be used to store the happiness of your pet
-	static int  happenessLevel = 0;
+	static int  happenessLevel = 5;
 	public static void main(String[] args) {
 		// 2. Ask the user what kind of pet they want to buy, and store their answer in a variable
-		String pet = JOptionPane.showInputDialog("What pet do you want? Fish, cat, dog, or tax "
+		String pet = JOptionPane.showInputDialog("What pet do you want? Cat or tax "
 				+ "evasion?");
 		// 3. REPEAT steps 4 - 7 enough times to make your pet happy!
 
 			// 4. Use showOptionDialog to ask the user what they want to do to make their pet happy
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
+			while(happenessLevel <= 20) {
 			int task = JOptionPane.showOptionDialog(null, "What would you like to do?", "Title", 0, JOptionPane.INFORMATION_MESSAGE, null,
 					new String[] { "Walk", "Pet", "Feed" }, null);
+			
 				if(pet.toLowerCase().contains("tax")&& task == 0) {
 					happenessLevel -= 10000;
 				}
@@ -26,13 +28,27 @@ public class HappyPet {
 				else if(pet.toLowerCase().contains("tax") && task == 2) {
 					happenessLevel -= 1000000000;
 				}
-				if(pet.toLowerCase().contains("cat")) {
-					
+				if(pet.toLowerCase().contains("cat") && task == 0) {
+					happenessLevel -=4;
+				}
+				else if(pet.toLowerCase().contains("cat") && task == 1) {
+					happenessLevel +=5;
+				}
+				else if(pet.toLowerCase().contains("cat") && task == 2) {
+					happenessLevel += 2;
+				}
+				if(happenessLevel >= 20) {
+					JOptionPane.showMessageDialog(null, "You won!!");
+					return;
+				}
+				if(task == 0 || task == 1 || task == 2) {
+					JOptionPane.showMessageDialog(null, "Your happiness level is " + happenessLevel);
 				}
 				if(happenessLevel < 0) {
 					JOptionPane.showMessageDialog(null, "YOU SUCK! >:(");
 					return;
 				}
+			}
 			// 6. Use user input to call the appropriate method created in step 5 below.
 		
 				
