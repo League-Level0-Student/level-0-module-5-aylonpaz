@@ -18,28 +18,40 @@ public class Calculator {
 			answer = divide(number1,number2,0);
 			result(answer);
 		}
-		// 4) Call the result() method and put the answer in a pop-up
+		else if(task == 1) {
+			answer = multiply(number1, number2 );
+			result(answer);
+		}
+		else if(task == 2) {
+			answer = subtract(number1, number2);
+			result(answer);
+		}
+		else if(task == 3) {
+			answer = add(number1, number2);
+			result(answer);
+		}
+		// 4) Call the () method and put the answer in a pop-up
 	}
 	
 	// 1) Make 4 static methods (add, subtract, multiply, divide)
 	//		They should each take 2 numbers as parameters
 	//		and return the answer.
-	 public static int multiply(int number1, int number2, int answer) {
-		 answer = number1 * number2;
-		 return answer;
+	 public static int multiply(int number1, int number2) {
+		 int answerValue = number1 * number2;
+		 return answerValue;
 	 }
 	public static int divide(int number1, int number2, int answer) {
 		answer = number1/number2;
 		System.out.println(answer);
 		return answer;
 	}
-	public static int add(int number1, int number2, int answer) {
-		answer =number1 + number2;
-		return answer;
+	public static int add(int number1, int number2) {
+		int answerValue =number1 + number2;
+		return answerValue;
 	}
-	public static int subtract(int number1, int number2, int answer) {
-		answer = number1 - number2;
-		return answer;
+	public static int subtract(int number1, int number2) {
+		int answerValue = number1 - number2;
+		return answerValue;
 	}
 	public static String result(int answer) {
 		String idk = "Your answer is "+answer;
